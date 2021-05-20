@@ -13,6 +13,8 @@ export class AppService {
       FileType.IMAGE,
       picture[0],
     );
-    return `http://localhost:${process.env.PORT || 4500}/${picturePath}`;
+    return `${
+      process.env.HOST || 'https://vast-everglades-62213.herokuapp.com/'
+    }${picturePath}`;
   }
 }
